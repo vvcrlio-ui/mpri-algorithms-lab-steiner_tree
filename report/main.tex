@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\usepackage{ctex}      % 中文支持
+\usepackage{amsmath}   % 数学公式
+\usepackage{amssymb}   % 数学符号，例如 \mathbb
+\usepackage{titling}   % 自定义标题
+
+\pretitle{\begin{center}\LARGE\bfseries}
+\posttitle{\end{center}}
+
+\title{MPRI Algorithms Lab: The Steiner Tree Problem}
+\author{Xiang Wan} 
+
+\begin{document}
+
+\maketitle % 这行命令会根据上面的标题和作者信息生成一个标题页
+
+\section{Problem Modeling}
+
+\subsection{Problem Definition: Minimum Steiner Tree}
+\label{sec:problem_definition_en}
+
+The following is the standard formal definition of the Minimum Steiner Tree problem, as found in the compendium.
+
+\begin{description}
+    \item[Instance:] 
+    A complete graph $G=(V,E)$, a metric given by edge weights $w: E \to \mathbb{Z}^+$, and a subset of required vertices $S \subset V$.
+
+    \item[Solution:] 
+    A Steiner tree, i.e., a subtree of $G$ that includes all the vertices in $S$.
+
+    \item[Measure:] 
+    The sum of the weights of the edges in the subtree, which is to be minimized.
+
+    \item[Good News:] 
+    The problem is approximable within a ratio of $1+\ln(3)/2 \approx 1.55$. In your project file, this approximation ratio is simplified to 2.
+
+    \item[Bad News:] 
+    The problem is APX-complete.
+
+    
+    \item[Garey and Johnson:] ND12.
+
+\end{description}
+
+
+% --- 正文结束 ---
+\end{document}
